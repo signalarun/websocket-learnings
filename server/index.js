@@ -9,7 +9,12 @@ io.on('connection', (socket) => {
 
     socket.on('message', (message) =>     {
         console.log(message);
-        io.emit('message', `${socket.id.substr(0,2)} said ${message}` );   
+        io.emit('message', `Broadcast : ${socket.id.substr(0,2)} said ${message}` );   
+        socket.emit('message', `me : said ${message}` );   
+    });
+
+    socket.on('disconnect', () => {
+      console.log(`user( ${socket.id.substr(0,2)}) disconnected`);
     });
 });
 
