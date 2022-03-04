@@ -10,6 +10,7 @@
   "author": "",
   "license": "GNU 3",
   "dependencies": {
+     "chalk": "^4.1.2",
     "socket.io": "^3.1.2",
     "ws": "^7.4.3"
   }
