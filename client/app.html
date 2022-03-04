@@ -6,15 +6,24 @@
     <title>Document</title>
     <script src="https://cdn.socket.io/socket.io-3.0.5.js"></script>
     <script defer src="app.js"></script>
+    <style>
+        ul.chat {
+          background-color: lightgrey;
+          width: 500px;
+          height: 400px;
+          overflow: auto;
+        }
+    </style>    
+
 </head>
 <body>
 
-    <ul>
+    <ul class="chat" id="chat">
         
     </ul>
 
     <input placeholder="message">
-    <button>Send</button>
+    <button>Send</button> <button onclick="terminate()">Terminate</button>
     
 </body>
 </html>
