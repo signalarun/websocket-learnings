@@ -5,7 +5,7 @@ const io = require('socket.io')(http, {
 });
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('user( ${socket.id.substr(0,2)}) connected');
 
     socket.on('message', (message) =>     {
         console.log(message);
